@@ -24,8 +24,7 @@ jobs:
           pyinstaller --noconfirm --windowed --onefile `
             --name FreeMatAIStudio `
             --paths app `
-            --paths app/mengine `
-            --add-data "app/mengine;mengine" `
+            --collect-submodules mengine `
             app/main.py
 
       - name: Subir EXE como artefacto
